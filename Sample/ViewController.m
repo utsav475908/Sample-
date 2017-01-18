@@ -16,6 +16,9 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    Something *some = [[Something alloc]init];
+    [some print];
+    
     // Do any additional setup after loading the view, typically from a nib.
 }
 

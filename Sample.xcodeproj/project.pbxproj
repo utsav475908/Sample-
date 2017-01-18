@@ -14,6 +14,10 @@
 		18696A091E2FDCAF0090E22F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 18696A081E2FDCAF0090E22F /* Assets.xcassets */; };
 		18696A0C1E2FDCAF0090E22F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 18696A0A1E2FDCAF0090E22F /* LaunchScreen.storyboard */; };
 		18696A171E2FDCAF0090E22F /* SampleUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 18696A161E2FDCAF0090E22F /* SampleUITests.m */; };
+		18696A281E2FEEBB0090E22F /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 18696A271E2FEEBB0090E22F /* Cocoa.framework */; };
+		18696A291E2FEF330090E22F /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 18696A271E2FEEBB0090E22F /* Cocoa.framework */; };
+		18696A2A1E2FEF330090E22F /* Cocoa.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 18696A271E2FEEBB0090E22F /* Cocoa.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		18696A2F1E2FEFEB0090E22F /* Shell Script File in Resources */ = {isa = PBXBuildFile; fileRef = 18696A2E1E2FEFEB0090E22F /* Shell Script File */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -25,6 +29,20 @@
 			remoteInfo = Sample;
 		};
 /* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		18696A2B1E2FEF330090E22F /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				18696A2A1E2FEF330090E22F /* Cocoa.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		186969F91E2FDCAE0090E22F /* Sample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Sample.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -40,6 +58,8 @@
 		18696A121E2FDCAF0090E22F /* SampleUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SampleUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		18696A161E2FDCAF0090E22F /* SampleUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SampleUITests.m; sourceTree = "<group>"; };
 		18696A181E2FDCAF0090E22F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		18696A271E2FEEBB0090E22F /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Cocoa.framework; sourceTree = "<group>"; };
+		18696A2E1E2FEFEB0090E22F /* Shell Script File */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "Shell Script File"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -47,6 +67,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				18696A291E2FEF330090E22F /* Cocoa.framework in Frameworks */,
+				18696A281E2FEEBB0090E22F /* Cocoa.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -81,6 +103,8 @@
 		186969FB1E2FDCAE0090E22F /* Sample */ = {
 			isa = PBXGroup;
 			children = (
+				18696A2E1E2FEFEB0090E22F /* Shell Script File */,
+				18696A271E2FEEBB0090E22F /* Cocoa.framework */,
 				186969FF1E2FDCAF0090E22F /* AppDelegate.h */,
 				18696A001E2FDCAF0090E22F /* AppDelegate.m */,
 				18696A021E2FDCAF0090E22F /* ViewController.h */,
@@ -121,6 +145,7 @@
 				186969F51E2FDCAE0090E22F /* Sources */,
 				186969F61E2FDCAE0090E22F /* Frameworks */,
 				186969F71E2FDCAE0090E22F /* Resources */,
+				18696A2B1E2FEF330090E22F /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
@@ -160,6 +185,7 @@
 				TargetAttributes = {
 					186969F81E2FDCAE0090E22F = {
 						CreatedOnToolsVersion = 8.1;
+						DevelopmentTeam = BW2JUPK3JZ;
 						ProvisioningStyle = Automatic;
 					};
 					18696A111E2FDCAF0090E22F = {
@@ -195,6 +221,7 @@
 			files = (
 				18696A0C1E2FDCAF0090E22F /* LaunchScreen.storyboard in Resources */,
 				18696A091E2FDCAF0090E22F /* Assets.xcassets in Resources */,
+				18696A2F1E2FEFEB0090E22F /* Shell Script File in Resources */,
 				18696A071E2FDCAF0090E22F /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -349,10 +376,17 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = BW2JUPK3JZ;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Sample",
+				);
 				INFOPLIST_FILE = Sample/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				ONLY_ACTIVE_ARCH = NO;
 				PRODUCT_BUNDLE_IDENTIFIER = com.kumar.Sample;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				VALID_ARCHS = "armv7 armv7s arm64 i386";
 			};
 			name = Debug;
 		};
@@ -360,10 +394,16 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = BW2JUPK3JZ;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Sample",
+				);
 				INFOPLIST_FILE = Sample/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.kumar.Sample;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				VALID_ARCHS = "armv7 armv7s arm64 i386";
 			};
 			name = Release;
 		};

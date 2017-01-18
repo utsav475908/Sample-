@@ -7,6 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
+#import <Cocoa/Cocoa.h>
 
 @interface ViewController : UIViewController
 
